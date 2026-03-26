@@ -6,7 +6,7 @@ export const Features = () => {
       {/* desktop */}
       <div className="relative hidden h-screen w-full md:block"></div>
       {/* mobile */}
-      <div className="relative flex gap-4 min-h-[170vh] w-full md:hidden overflow-hidden">
+      <div className="relative flex gap-4 min-h-[200vh] w-full md:hidden overflow-hidden">
         <div className="absolute -top-20 flex flex-col gap-8 items-center justify-center p-6">
           <Image
             src="/images/homepage/enjoyable-place-mobile.jpg"
