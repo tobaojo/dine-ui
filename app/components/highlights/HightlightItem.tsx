@@ -12,7 +12,7 @@ const HightlightItem = ({
   description,
 }: HighlightItemProps) => {
   return (
-    <div className="flex flex-col gap-4 items-center text-white not-last:border-b border-gray-700 pb-8 ">
+    <div className="flex w-full flex-col items-center gap-4 border-gray-700 pb-8 text-white not-last:border-b">
       <Image
         src={imageSrc}
         alt={title}
@@ -21,7 +21,9 @@ const HightlightItem = ({
         width={327}
       />
       <h3 className="font-bold text-xl text-center tracking-tight">{title}</h3>
-      <p className="text-center w-80">{description}</p>
+      <p className="w-full max-w-80 text-center leading-relaxed">
+        {description}
+      </p>
     </div>
   );
 };

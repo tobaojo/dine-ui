@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --section-space-mobile: clamp(2.5rem, 8vw, 4rem);
+  --section-space-desktop: clamp(4rem, 6vw, 6rem);
 }
 
 @theme inline {
@@ -10,4 +12,38 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-league-spartan), sans-serif;
+}
+
+.mobile-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-space-mobile);
+}
+
+.mobile-section {
+  padding-block: var(--section-space-mobile);
+}
+
+.mobile-section--tight {
+  padding-block: clamp(1.5rem, 6vw, 2.5rem);
+}
+
+@media (min-width: 768px) {
+  .mobile-stack {
+    gap: var(--section-space-desktop);
+  }
+
+  .mobile-section {
+    padding-block: var(--section-space-desktop);
+  }
+
+  .mobile-section--tight {
+    padding-block: clamp(2rem, 4vw, 3rem);
+  }
 }

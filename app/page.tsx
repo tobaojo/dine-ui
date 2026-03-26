@@ -6,12 +6,12 @@ import { Features } from "./Features";
 
 export default function Home() {
   return (
-    <div className="">
+    <main className="mobile-stack">
       <Hero />
       <Features />
       <Hightlights />
       <Gathering />
       <Footer />
-    </div>
+    </main>
   );
 }

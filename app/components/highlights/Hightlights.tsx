@@ -23,21 +23,21 @@ export const Hightlights = () => {
     },
   ];
   return (
-    <div className="bg-[#111111] py-32">
+    <div className="bg-[#111111] mobile-section">
       {/* desktop */}
       <div className="relative hidden h-screen w-full md:block"></div>
       {/* mobile */}
-      <div className="relative flex flex-col gap-4 min-h-[200vh] w-full md:hidden overflow-hidden leading-loose">
+      <div className="relative mx-auto flex w-full max-w-md flex-col gap-8 px-6 leading-relaxed md:hidden">
         <Image
           src="/images/patterns/pattern-divide.svg"
           alt="Seasonal Menu"
           sizes="100vw"
           height={100}
           width={100}
-          className="self-center mx-auto shadow-xl"
+          className="mx-auto self-center"
         />
-        <div className="flex flex-col gap-8 items-center justify-center p-6">
-          <h2 className="font-bold text-3xl text-center text-white w-70">
+        <div className="flex flex-col items-center justify-center gap-6">
+          <h2 className="w-70 text-center text-3xl font-bold text-white">
             A few highlights from our menu
           </h2>
           <p className="text-white text-center">
@@ -45,7 +45,7 @@ export const Hightlights = () => {
             of our diner’s favourites. Our menu is revamped every season.
           </p>
         </div>
-        <div className="flex flex-col gap-8 items-center justify-center p-4">
+        <div className="flex flex-col items-center justify-center gap-8">
           {highlights.map((highlight, index) => (
             <HightlightItem
               key={index}

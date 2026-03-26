@@ -19,7 +19,7 @@ export const Hero = () => {
         </div>
       </div>
       {/* mobile */}
-      <div className="relative h-screen w-full md:hidden">
+      <div className="relative min-h-[100svh] w-full md:hidden">
         <Image
           src="/images/homepage/hero-bg-mobile.jpg"
           alt="Hero Image"
@@ -27,8 +27,8 @@ export const Hero = () => {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="flex flex-col gap-8 items-center text-center">
+        <div className="absolute inset-0 flex items-center justify-center px-6 py-10">
+          <div className="flex flex-col items-center gap-6 text-center">
             <Image
               src="/images/logo.svg"
               alt="Hero Text"
@@ -36,16 +36,16 @@ export const Hero = () => {
               height={100}
               className="object-contain"
             />
-            <h1 className="text-white text-4xl font-extralight mt-4 w-60">
+            <h1 className="w-60 text-4xl font-extralight text-white">
               Exquisite dining since 1989
             </h1>
-            <p className="text-white text-lg mt-2 leading-loose w-90">
+            <p className="max-w-[22rem] text-lg leading-relaxed text-white">
               Experience our seasonal menu in beautiful country surroundings.
               Eat the freshest produce from the comfort of our farmhouse.
             </p>
             <Link
               href="/booking"
-              className="text-white text-lg border-2 border-white px-8 py-4 mt-4 hover:bg-white hover:text-black transition w-[80%] text-center "
+              className="mt-2 w-[80%] border-2 border-white px-8 py-4 text-center text-lg text-white transition hover:bg-white hover:text-black"
             >
               BOOK A TABLE
             </Link>
