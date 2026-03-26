@@ -64,51 +64,53 @@ export const Carosel = () => {
             </motion.button>
           ))}
         </div>
-        {currentIndex === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="bg-opacity-50 p-4 text-center text-gray-800"
-          >
-            <h2 className="my-4 text-4xl font-bold">Family Gathering</h2>
-            <p className="mt-2 text-lg leading-relaxed text-slate-700">
-              we love catering for your family events. So please let us know how
-              we can help make your event special.
-            </p>
-          </motion.div>
-        )}
-        {currentIndex === 1 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="bg-opacity-50 p-4 text-center text-gray-800"
-          >
-            <h2 className="my-4 text-4xl font-bold">Special Events</h2>
-            <p className="mt-2 text-lg leading-relaxed text-slate-700">
-              whether it&apos;s a corporate event, a wedding, or any other
-              special occasion, we are here to make it memorable.
-            </p>
-          </motion.div>
-        )}
-        {currentIndex === 2 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="bg-opacity-50 p-4 text-center text-gray-800"
-          >
-            <h2 className="my-4 text-4xl font-bold">Social Events</h2>
-            <p className="mt-2 text-lg leading-relaxed text-slate-700">
-              we cater to a variety of social events, ensuring a memorable
-              experience for you and your guests.
-            </p>
-          </motion.div>
-        )}
+        <AnimatePresence mode="wait">
+          {currentIndex === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="bg-opacity-50 p-4 text-center text-gray-800"
+            >
+              <h2 className="my-4 text-4xl font-bold">Family Gathering</h2>
+              <p className="mt-2 text-lg leading-relaxed text-slate-700">
+                we love catering for your family events. So please let us know
+                how we can help make your event special.
+              </p>
+            </motion.div>
+          )}
+          {currentIndex === 1 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="bg-opacity-50 p-4 text-center text-gray-800"
+            >
+              <h2 className="my-4 text-4xl font-bold">Special Events</h2>
+              <p className="mt-2 text-lg leading-relaxed text-slate-700">
+                whether it&apos;s a corporate event, a wedding, or any other
+                special occasion, we are here to make it memorable.
+              </p>
+            </motion.div>
+          )}
+          {currentIndex === 2 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="bg-opacity-50 p-4 text-center text-gray-800"
+            >
+              <h2 className="my-4 text-4xl font-bold">Social Events</h2>
+              <p className="mt-2 text-lg leading-relaxed text-slate-700">
+                we cater to a variety of social events, ensuring a memorable
+                experience for you and your guests.
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
