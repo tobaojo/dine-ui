@@ -27,7 +27,7 @@ export const Hightlights = () => {
       {/* desktop */}
       <div className="relative hidden h-screen w-full md:block"></div>
       {/* mobile */}
-      <div className="relative flex flex-col gap-4 h-[170vh] w-full md:hidden overflow-hidden">
+      <div className="relative flex flex-col gap-4 min-h-[200vh] w-full md:hidden overflow-hidden">
         <Image
           src="/images/patterns/pattern-divide.svg"
           alt="Seasonal Menu"

@@ -3,9 +3,8 @@ import Link from "next/link";
 export const Gathering = () => {
   return (
     <div>
-      Gathering
       <div className="relative hidden h-screen w-full md:block"></div>
-      <div className="relative flex flex-col gap-4 h-[120vh] w-full md:hidden overflow-hidden">
+      <div className="relative flex flex-col gap-4 min-h-[200vh] w-full md:hidden overflow-hidden">
         <Carosel />
         <Link
           href="/booking"
