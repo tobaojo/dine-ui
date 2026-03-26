@@ -8,7 +8,7 @@ export const Carosel = () => {
   const images = [
     {
       src: "/images/homepage/family-gathering-mobile.jpg",
-      alt: "Family gathering",
+      alt: "Family gatherings",
     },
     {
       src: "/images/homepage/special-events-mobile.jpg",
@@ -34,6 +34,7 @@ export const Carosel = () => {
             animate={{ opacity: 1, translateY: 0 }}
             exit={{ opacity: 0, translateY: -30 }}
             transition={{ duration: 0.5 }}
+            layout
             className="relative w-full overflow-hidden"
           >
             <Image
@@ -45,25 +46,26 @@ export const Carosel = () => {
             />
           </motion.div>
         </AnimatePresence>
-
-        <div className="my-4 flex flex-col justify-center gap-4">
-          {images.map((image, index) => (
-            <motion.button
-              key={index}
-              onClick={() => handleChangeImage(index)}
-              className={`uppercase text-xl font-semibold tracking-wide text-gray-400 hover:text-gray-700 focus:outline-none ${currentIndex === index ? "text-gray-700" : "text-gray-400"}`}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 1, delay: index * 0.2 }}
-              whileInView={{ opacity: 1, translateY: [30, 0] }}
-              viewport={{ once: true }}
-            >
-              {image.alt}
-              {currentIndex === index && (
-                <div className="w-[15%] h-px bg-[#9E7F66] mt-2 mx-auto"></div>
-              )}
-            </motion.button>
-          ))}
-        </div>
+        <AnimatePresence>
+          <div className="my-4 flex flex-col justify-center gap-4">
+            {images.map((image, index) => (
+              <motion.button
+                key={index}
+                onClick={() => handleChangeImage(index)}
+                className={`uppercase text-xl font-semibold tracking-wide text-gray-400 hover:text-gray-700 focus:outline-none ${currentIndex === index ? "text-gray-700" : "text-gray-400"}`}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 1, delay: index * 0.2 }}
+                whileInView={{ opacity: 1, translateY: [30, 0] }}
+                viewport={{ once: true }}
+              >
+                {image.alt}
+                {currentIndex === index && (
+                  <div className="w-[15%] h-px bg-[#9E7F66] mt-2 mx-auto"></div>
+                )}
+              </motion.button>
+            ))}
+          </div>
+        </AnimatePresence>
         <AnimatePresence mode="wait">
           {currentIndex === 0 && (
             <motion.div

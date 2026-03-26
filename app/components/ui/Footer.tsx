@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -12,7 +14,12 @@ const Footer = () => {
           fill
           sizes="100vw"
         />
-        <div className="absolute top-0 left-0 flex h-full w-full flex-col items-center justify-center gap-6 px-6 text-center text-white">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, translateY: [30, 0] }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="absolute top-0 left-0 flex h-full w-full flex-col items-center justify-center gap-6 px-6 text-center text-white"
+        >
           <h2 className="text-4xl font-bold leading-relaxed">
             Ready to make a reservation?
           </h2>
@@ -22,7 +29,7 @@ const Footer = () => {
           >
             BOOK A TABLE
           </Link>
-        </div>
+        </motion.div>
       </div>
       <div>
         <div className="flex flex-col items-center gap-7 bg-black px-8 py-12 text-white">
