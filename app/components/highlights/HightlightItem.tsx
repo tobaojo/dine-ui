@@ -20,8 +20,8 @@ const HightlightItem = ({
         height={1249}
         width={327}
       />
-      <h3 className="font-bold text-xl text-center">{title}</h3>
-      <p className="text-center">{description}</p>
+      <h3 className="font-bold text-xl text-center tracking-tight">{title}</h3>
+      <p className="text-center w-80">{description}</p>
     </div>
   );
 };

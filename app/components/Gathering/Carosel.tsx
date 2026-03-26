@@ -24,14 +24,14 @@ export const Carosel = () => {
   };
 
   return (
-    <div>
+    <div className="pt-10">
       <div className="relative w-full p-6">
         <Image
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
           height={350}
           width={500}
-          className="shadow-xl/30"
+          className="shadow-xl/30 mb-10"
         />
         <div className="flex flex-col justify-center gap-6 my-4">
           {images.map((image, index) => (
@@ -48,27 +48,27 @@ export const Carosel = () => {
           ))}
         </div>
         {currentIndex === 0 && (
-          <div className=" bottom-0 left-0 right-0 bg-opacity-50 text-gray-800 p-4 text-center">
-            <h2 className="text-4xl font-bold">Family Gathering</h2>
-            <p className="mt-2 text-gray-500 text-lg">
+          <div className="bg-opacity-50 text-gray-800 p-4 text-center">
+            <h2 className="text-4xl font-bold my-5">Family Gathering</h2>
+            <p className="mt-2 text-slate-700 text-lg">
               we love catering for your family events. So please let us know how
               we can help make your event special.
             </p>
           </div>
         )}
         {currentIndex === 1 && (
-          <div className=" bottom-0 left-0 right-0 bg-opacity-50 text-gray-800 p-4 text-center">
-            <h2 className="text-4xl font-bold">Special Events</h2>
-            <p className="mt-2 text-gray-500 text-lg">
+          <div className="bg-opacity-50 text-gray-800 p-4 text-center">
+            <h2 className="text-4xl font-bold my-5">Special Events</h2>
+            <p className="mt-2 text-slate-700 text-lg">
               whether it&apos;s a corporate event, a wedding, or any other
               special occasion, we are here to make it memorable.
             </p>
           </div>
         )}
         {currentIndex === 2 && (
-          <div className=" bottom-0 left-0 right-0 bg-opacity-50 text-gray-800 p-4 text-center">
-            <h2 className="text-4xl font-bold">Social Events</h2>
-            <p className="mt-2 text-gray-500 text-lg">
+          <div className="bg-opacity-50 text-gray-800 p-4 text-center">
+            <h2 className="text-4xl font-bold my-5">Social Events</h2>
+            <p className="mt-2 text-slate-700 text-lg">
               we cater to a variety of social events, ensuring a memorable
               experience for you and your guests.
             </p>

@@ -39,7 +39,7 @@ export const Hero = () => {
             <h1 className="text-white text-4xl font-extralight mt-4 w-60">
               Exquisite dining since 1989
             </h1>
-            <p className="text-white text-lg mt-2 leading-relaxed w-90">
+            <p className="text-white text-lg mt-2 leading-loose w-90">
               Experience our seasonal menu in beautiful country surroundings.
               Eat the freshest produce from the comfort of our farmhouse.
             </p>
