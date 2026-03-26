@@ -4,7 +4,7 @@ export const Gathering = () => {
   return (
     <div>
       <div className="relative hidden h-screen w-full md:block"></div>
-      <div className="relative flex flex-col gap-4 min-h-screen w-full md:hidden overflow-hidden">
+      <div className="relative flex flex-col gap-4 min-h-[130vh] w-full md:hidden overflow-hidden">
         <Carosel />
         <Link
           href="/booking"
