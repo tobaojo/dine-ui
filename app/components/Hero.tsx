@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 export const Hero = () => {
   return (
     <>
@@ -19,7 +21,12 @@ export const Hero = () => {
         </div>
       </div>
       {/* mobile */}
-      <div className="relative min-h-[100svh] w-full md:hidden">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative min-h-svh w-full md:hidden"
+      >
         <Image
           src="/images/homepage/hero-bg-mobile.jpg"
           alt="Hero Image"
@@ -51,7 +58,7 @@ export const Hero = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

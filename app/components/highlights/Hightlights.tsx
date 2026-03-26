@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import HightlightItem from "./HightlightItem";
+import { motion } from "framer-motion";
 
 export const Hightlights = () => {
   const highlights = [
@@ -36,7 +38,13 @@ export const Hightlights = () => {
           width={100}
           className="mx-auto self-center"
         />
-        <div className="flex flex-col items-center justify-center gap-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          whileInView={{ opacity: 1, translateY: [20, 0] }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center justify-center gap-6"
+        >
           <h2 className="w-70 text-center text-3xl font-bold text-white">
             A few highlights from our menu
           </h2>
@@ -44,15 +52,23 @@ export const Hightlights = () => {
             We cater for all dietary requirements, but here’s a glimpse at some
             of our diner’s favourites. Our menu is revamped every season.
           </p>
-        </div>
+        </motion.div>
         <div className="flex flex-col items-center justify-center gap-8">
           {highlights.map((highlight, index) => (
-            <HightlightItem
+            <motion.div
               key={index}
-              title={highlight.title}
-              description={highlight.description}
-              imageSrc={highlight.imageSrc}
-            />
+              initial={{ opacity: 0 }}
+              transition={{ duration: 1, delay: index * 0.2 }}
+              whileInView={{ opacity: 1, translateY: [30, 0] }}
+              viewport={{ once: true }}
+            >
+              <HightlightItem
+                key={index}
+                title={highlight.title}
+                description={highlight.description}
+                imageSrc={highlight.imageSrc}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
